@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react'
 import ListaCards from './componentes/ProductList'
 import Menu from './componentes/Menu'
-import Carousel from './componentes/Carrousel'
+import Carousel from './componentes/Carousel'
 
 function App() {
   return (
