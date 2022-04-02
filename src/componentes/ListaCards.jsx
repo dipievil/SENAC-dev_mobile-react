@@ -1,9 +1,9 @@
 import React from 'react'
-import produtos from '../data/produtos'
+import products from '../data/products'
 import Card from './Card'
 
 function ListaCards(props) {
-    return produtos.map(prod => 
+    return products.map(prod => 
             <Card key={prod.id} titulo={prod.nome}>
                 <h3>{prod.preco}</h3>
             </Card>)
