@@ -1,18 +1,13 @@
-import React from 'react'
-import { Products } from '../data/products'
+import React, {useState, useEffect} from 'react'
 import Card from './ProductCard'
 import LazyLoad from "react-lazyload"
+import Api from '../services/api'
 
 function importAll(r) {
 	let images = {};
         r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
 	return images
 }
-
-const { search } = window.location;
-const query = new URLSearchParams(search).get('S');
-
-console.log(query);
 
 function filterProducts (products, query){
         if (!query) {
@@ -25,16 +20,29 @@ function filterProducts (products, query){
         });
     };
 
-const filteredProducts = filterProducts(Products, query);    
-const images = importAll(require.context('../res', false));
 
-function loadImage(imageName){
+function loadImage(imageName){ 
+        const images = importAll(require.context('../res', false));        
         const imgUrl = images[imageName]
         return imgUrl;
 }
 
 function ListProducts(props) {
-    return Products.map(prod => {           
+
+        const { search } = window.location;
+        const query = new URLSearchParams(search).get('S');
+
+        const [Products, setProdutos] = useState([]);
+
+        useEffect(() => {
+                Api.get("http://localhost:4200/products")
+                .then((response) => setProdutos(response.data))
+                .catch((err) => console.log(err))    
+        },[])
+
+        const filteredProducts = filterProducts(Products, query);   
+
+    return filteredProducts.map(prod => {           
             return (
             <Card key={prod.id} title={prod.nome}>
                     <LazyLoad><img className="card-img-top" src={loadImage(prod.img)} alt={prod.nome} /></LazyLoad>
