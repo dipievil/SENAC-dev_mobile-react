@@ -9,6 +9,23 @@ function importAll(r) {
 	return images
 }
 
+const { search } = window.location;
+const query = new URLSearchParams(search).get('S');
+
+console.log(query);
+
+function filterProducts (products, query){
+        if (!query) {
+            return products;
+        }
+        
+        return products.filter((product) => {
+            const productName = product.nome.toLowerCase();
+            return productName.includes(query.toLowerCase());            
+        });
+    };
+
+const filteredProducts = filterProducts(Products, query);    
 const images = importAll(require.context('../res', false));
 
 function loadImage(imageName){
