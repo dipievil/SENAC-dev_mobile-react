@@ -14,13 +14,12 @@ function Carousel(props){
     if(index>length) {index = 1;}
     if(index<1) {index = length}
     setSlideIndex(index);
-    console.log(slideIndex)
   }
 
     return (    
         <div className="carousel slide" data-ride="carousel">
         <div className="carousel-inner">
-          <div className={"carousel-item  " + ((slideIndex == 1) ? 'active' : '')} >
+          <div className={"carousel-item  " + ((slideIndex === 1) ? 'active' : '')} >
             <img className="d-block w-100" src={slide1} alt="First slide" />
           </div>
           <div className={"carousel-item " + ((slideIndex === 2) ? 'active' : '')} >
