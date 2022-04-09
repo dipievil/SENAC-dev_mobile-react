@@ -38,5 +38,13 @@ export const Products = [
     img:"p_3_5.webp", 
     cat:"3",
     preco:"4.899,99"
+  },
+  {
+    id: 5,
+    nome: "Smartphone Samsung Galaxy A32",
+    desc: "128GB 4G Wi-Fi Tela 6.4'' Dual Chip 4GB RAM Câmera Quádrupla + Selfie 20MP - Azul",
+    img:"p_5_2.webp", 
+    cat:"2",
+    preco:"1.799,00"
   }
-  ]
+]
