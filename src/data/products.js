@@ -1,23 +1,42 @@
 export const Products = [
   {
     id: 1,
-    nome: "Notinbukinson",
-    desc: "Só nos computer",
-    img:"https://images-americanas.b2w.io/produtos/01/00/img/3735745/0/3735745038P1.jpg", 
+    nome: "Notebook Dell Inspiron I15-3501-A25P",
+    desc: "Intel Core I3-1005G1 4GB 256GB SSD W10 15.6\" - Preto",
+    img:"p_1_1.webp", 
+    cat:"1",
     preco:"8.000,01"
   },
   {
     id: 2,
-    nome: "Espertofone",
-    desc: "Contém tique-toque.",
-    img:"https://images-americanas.b2w.io/produtos/01/00/img/3616585/7/3616585730P1.jpg", 
-    preco:"8.000,01"
+    nome: "Samsung Galaxy S20 Fe Cloud Navy",
+    desc: "Smartphone Samsung Galaxy S20 Fe 128GB 4G Wi-Fi Tela 6.5'' Dual Chip 6GB RAM Câmera Tripla + Selfie 32MP - Cloud Navy",
+    img: "p_2_2.webp",
+    cat:"2",
+    preco:"2.348,49"
   },
   {
     id: 3,
-    nome: "Prei Estaition",
-    desc: "Vidiogame de última da Sonia.",
-    img:"https://images-americanas.b2w.io/produtos/4530653412/imagens/skin-ps5-playstation-5-adesivo-branco/4530653412_1_large.jpg", 
-    preco:"8.000,01"
+    nome: "PS5",
+    desc: "Playstation 5",
+    img:"p_3_3.webp", 
+    cat:"3",
+    preco:"4.999,99"
+  },
+  {
+    id: 4,
+    nome: "Xbox Series X",
+    desc: "1 terabyte",
+    img:"p_3_4.webp", 
+    cat:"3",
+    preco:"5.399,99"
+  },
+  {
+    id: 5,
+    nome: "Console Playstation 5",
+    desc: "PS5 + Controle Sem Fio Dualsense Midnight Black",
+    img:"p_3_5.webp", 
+    cat:"3",
+    preco:"4.899,99"
   }
   ]
