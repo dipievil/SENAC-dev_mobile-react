@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Menu(props){
+function Menu(){
     return (
   
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,15 +24,14 @@ function Menu(props){
               <a className="nav-link" href="#">Sobre</a>
             </li>
           </ul>
-          <form className="form-inline my-2 my-lg-0">
+          <form className="form-inline my-2 my-lg-0" action="/" method="get">
             <div className="form-group row">
-              <input className="form-control mr-sm-2" type="search" placeholder="Procure seu produto" aria-label="Search" />
+              <input className="form-control mr-sm-2" type="search" placeholder="Procure seu produto" aria-label="Search" name='S' />
+              <button type="submit">Buscar</button>
             </div>
           </form>
         </div>
-      </nav>
-    
-      
+      </nav> 
     )
 }
 
